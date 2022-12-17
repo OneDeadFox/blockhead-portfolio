@@ -5,31 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tyler Blockhead Brown Portfolio</title>
+    <link rel="stylesheet" href="./assets/CSS/style.css" />
 </head>
-<body>
+<body class="grid">
     <!-- Logo, Site Title, Contact Links -->
-    <header>
-        <img src="./assets/images/blockhead-logo.jpg" alt = "Blockhead">
-        <h1>Portfolio: <span>Tyler <span>- Blockhead -</span> Brown</span></h1>
+    <header class="header">
+        <img src="./assets/images/blockhead-logo.png" alt = "Blockhead">
+        <h1>Portfolio:&nbsp<span>Tyler<span>&nbsp{Blockhead}&nbsp</span> Brown</span></h1>
         <ul>
-            <li><a href="mailto:tjosephb.pro@gmail.com"> Email </a></li>
-            <li><a href="https://github.com/OneDeadFox" target="_blank"> Github </a></li>
+            <li><button class="nav-button"><a href="#about"> About </a></button></li>
+            <li><button class="nav-button"><a href="#work"> Work </a></button></li>
+            <li><button class="nav-button"><a href="#contact"> Contact </a></button></li>
+            <li><button class="nav-button"><a href="#resume"> Resume </a></button></li>
         </ul>
 
     </header>
-    <!-- Nav Bar, Insite Project Links -->
-    <nav>
-        <ul>
-            <li><a href="#"> Project 1 </a></li>
-            <li><a href="#"> Project 2 </a></li>
-            <li><a href="#"> Project 3 </a></li>
-            <li><a href="#"> Project 4 </a></li>
-
-        </ul>
-    </nav>
     <!-- Profile Pic, Name, Contact Links, Highlights/Tallents -->
-    <aside>
-        <img src="http://placekitten.com/200/200" alt="Placeholder">
+    <aside class="aside perimeter">
+        <img src="./assets/images/blockhead-logo.png" alt="Blockhead">
         <h2>Tyler Brown</h2>
         <h3>Contact Information:</h3>
         <ul>
@@ -39,26 +32,30 @@
             <li><a href="#">LinkedIn</a></li>
 
         </ul>
-        <h3>In-Project Navigation:</h3>
+        <!-- <h3>In-Project Navigation:</h3>
         <ul>
             <li>Project 1</li>
             <li>Project 2</li>
             <li>Project 3</li>
             <li>Project 4</li>
-        </ul>
+        </ul> -->
     </aside>
     <!-- About me, Project Img Links -->
-    <main>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus sequi earum consequuntur, pariatur ullam minus eos sapiente magni aspernatur, nam nobis! Nesciunt doloremque consequuntur neque hic consectetur quod beatae cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam minima aspernatur ratione nisi reprehenderit doloremque eius maxime, nihil repellat quia maiores provident. Repellendus quae officia minima accusantium perspiciatis et?</p>
-        <ul>
-            <li><a href="#">
-                <img src="http://placekitten.com/200/200" alt="Placeholder">
-                <img src="http://placekitten.com/200/200" alt="Placeholder">
-                <img src="http://placekitten.com/200/200" alt="Placeholder">
-                <img src="http://placekitten.com/200/200" alt="Placeholder">
-            </a></li>
-        </ul>
-    </main>
+    <main class="main main-image-grid">
+        <h3 class="main-header">About Me:</h3>
+        <p class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus sequi earum consequuntur, pariatur ullam minus eos sapiente magni aspernatur, nam nobis! Nesciunt doloremque consequuntur neque hic consectetur quod beatae cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam minima aspernatur ratione nisi reprehenderit doloremque eius maxime, nihil repellat quia maiores provident. Repellendus quae officia minima accusantium perspiciatis et?</p>
+        <div class="main-img-1">
+        </div>
+        <div class="main-img-2">
+        </div>
+        <div class="main-img-3">
+        </div>
+        <div class="main-img-4">
+        </div>
 
+    </main>
+    <footer class="footer perimeter">
+        <h2>Here is some text</h2>
+    </footer>
 </body>
 </html>
