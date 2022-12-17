@@ -1,12 +1,12 @@
 :root {
-    --header-color: rgb(24, 24, 24);
+    --header-color: rgb(30, 30, 30);
     --bg-color:  rgb(15, 15, 15);
     --accent: #156fa5;
-    --peri-text: white;
 }
 
 * {
     font-family: 'Courier New', Courier, monospace;
+    color: white;
     padding: 0;
     margin:  0;
     box-sizing: border-box;
@@ -20,7 +20,7 @@ header {
 
     header img {
         max-width:4em;
-        width: auto;
+        max-width: auto;
         height: auto;
     }
 
@@ -110,7 +110,6 @@ aside h3 {
 /* Layout */
 .header {
     grid-area: header;
-    color: var(--peri-text);
     display: flex;
 }
 
@@ -120,6 +119,7 @@ aside h3 {
 
 .main {
     grid-area: main;
+    padding-right: 5%
 }
 
 .footer {
@@ -127,6 +127,7 @@ aside h3 {
 }
 .grid {
     display: grid;
+    max-width: 100%;
     grid-template-areas: 
     'header header header header header header'
     'aside aside main main main main'
@@ -138,49 +139,71 @@ aside h3 {
 /* Main */
 .main-header {
     grid-area: main-header;
-    background-color: rgb(0, 17, 255);
-
+    font-size: 200%;
+    font-weight: 400;
+    margin-left: 2%;
+    margin-bottom: 5px;
 }
 
 .about {
     grid-area: about;
+    font-size: 1.2em;
+    margin-left: 7%;
+    line-height: 175%;
+}
+
+.about span {
+    font-size: 200%;
+    font-weight: 400;
+    margin-top: 5px;
+    position: relative;
+    right: 6%;
 }
 
 .main-img-1 {
     grid-area: main-img-1;
     background-color: grey;
-    background-image: ;
-    width: 100%;
+    /* background-image: url("https://onedeadfox.github.io/blockhead-portfolio/assets/images/blockhead-logo.png"); */
+    width: auto;
     padding-top: 56.25%;
+    margin-top: 2%;
+    display: flex;
 }
 
 .main-img-2 {
     grid-area: main-img-2;
     background-color: pink;
-    width: 100%;
+    width: auto;
     padding-top: 56.25%;
+    display: flex;
 }
 
 
 .main-img-3 {
     grid-area: main-img-3;
     background-color: purple;
+    width: auto;
+    display: flex;
+
 }
 
 
 .main-img-4 {
     grid-area: main-img-4;
     background-color:green;
+    width:auto;
+    display: flex;
 }
 
-.main div img {
-    object-fit: scale-down;
+.main div {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 .main-image-grid {
     display: grid;
-
-    background-color: aqua;
+    background-image: linear-gradient(to top right, var(--bg-color,) 10%, var(--header-color)100%);
     grid-template-areas: 
     'main-header main-header main-header main-header'
     'about about about about'
@@ -190,6 +213,34 @@ aside h3 {
     'main-img-1 main-img-1 main-img-1 main-img-1'
     'main-img-2 main-img-2 main-img-3 main-img-3'
     'main-img-2 main-img-2 main-img-4 main-img-4';
+}
+
+.tag {
+    background-color: var(--header-color);
+    width: fit-content;
+    height: fit-content;
+    color: var(--peri-text);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 5px;
+    position: absolute;
+    bottom: 15px;
+    border-radius: 0 10px 10px 0;
+}
+
+.tag-inverted {
+    background-color: var(--header-color);
+    width: fit-content;
+    height: fit-content;
+    color: var(--peri-text);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 5px;
+    position: absolute;
+    bottom: 15px;
+    border-radius: 0 10px 10px 0;
 }
 /*#endregion MainLayout*/
 
