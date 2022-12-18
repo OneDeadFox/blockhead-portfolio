@@ -1,3 +1,8 @@
+/* To Do List:
+make a class for the hx headings that 
+includes font size and weight
+*/
+
 :root {
     --header-color: rgb(30, 30, 30);
     --bg-color:  rgb(15, 15, 15);
@@ -17,13 +22,73 @@ header {
     align-items: center;
     background-color: var(--header-color);
     border-bottom: .5em double var(--accent);
+    display: flex;
 }
 
-header img {
-    max-width:4em;
-    max-width: auto;
-    height: auto;
+/*#region BlockheadLogo*/
+.cube {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 8px;
+    left: 17px;
+    transform-style: preserve-3d;
+    transform: rotateX(240deg) rotateY(-5deg) rotateZ(-155deg);
 }
+
+.side {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+
+}
+
+.top {
+    transform: translateZ(-20px);
+    background: var(--accent);
+    opacity: 70%;
+}
+
+.front {
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+    background: var(--accent);
+}
+
+.left {
+    width: 20px;
+    transform: translateZ(-20px) rotateY(90deg);
+    transform-origin: right;
+    background: var(--accent);
+    opacity: 30%;
+}
+
+.left-eye {
+    width: 5px;
+    height: 5px;
+    background: black;
+    border: 1px solid black;
+    border-right: 1px solid lightgrey;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+}
+
+.right-eye {
+    width: 5px;
+    height: 5px;
+    background: black;
+    border: 1px solid black;
+    border-right: 1px solid lightgrey;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 3px;
+    left: 1px;
+}
+/*#endregion BlockheadLogo*/
 
 /* Heading */
 h1 {
@@ -101,12 +166,23 @@ aside img {
 
 aside h2 {
     font-size: 300%;
+    width: 100%;
     align-self: center;
-    margin-bottom: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 10%;
+    border-bottom: 3px solid var(--accent);
+}
+
+aside li {
+    font-size: 110%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 12%;
 }
 
 aside h3 {
-    font-size: 150%;
+    font-size: 200%;
+    font-weight: 400;
 }
 /*#endregion Aside*/
 
@@ -167,39 +243,49 @@ aside h3 {
 
 .main-img-1 {
     grid-area: main-img-1;
-    background-color: grey;
     background-image: url("https://onedeadfox.github.io/challenge-1-horiseon/assets/images/screenshot.PNG");
     background-size: cover;
     width: auto;
     padding-top: 56.25%;
     margin-top: 2%;
     display: flex;
+    opacity: 60%;
+    transition: all 0.3s ease-in;
 }
 
 .main-img-2 {
     grid-area: main-img-2;
-    background-color: pink;
+    background-image: url("https://onedeadfox.github.io/blockhead-portfolio/assets/images/blockhead-logo.png");
+    background-size: cover;
+    background-position: bottom;
     width: auto;
     padding-top: 56.25%;
     display: flex;
+    opacity: 60%;
+    transition: all 0.3s ease-in;
 }
 
 
 .main-img-3 {
     grid-area: main-img-3;
-    background-color: purple;
+    background-image: url("https://onedeadfox.github.io/blockhead-portfolio/assets/images/blockhead-logo.png");
+    background-size: contain;
     width: auto;
     display: flex;
-
+    opacity: 60%;
+    transition: all 0.3s ease-in;
 }
 
 
 .main-img-4 {
     grid-area: main-img-4;
-    background-color:green;
+    background-image: url("https://onedeadfox.github.io/blockhead-portfolio/assets/images/blockhead-logo.png");
+    background-position-y: -200px;
     width: auto;
     height: auto;
     display: flex;
+    opacity: 60%;
+    transition: all 0.3s ease-in;
 }
 
 .main div span {
@@ -220,6 +306,7 @@ aside h3 {
 
 main div:hover{
     box-shadow: 2px 2px 0px var(--accent), 2px -2px 0px var(--accent), -2px -2px 0px var(--accent), -2px 2px 0px var(--accent);
+    opacity: 100%;
 }
 
 .main-image-grid {
@@ -236,6 +323,7 @@ main div:hover{
     'main-img-2 main-img-2 main-img-4 main-img-4';
 }
 
+/* fix tag so it doesn't fade with the backgrounds opacity */
 .tag {
     background-color: var(--header-color);
     width: fit-content;
@@ -248,7 +336,8 @@ main div:hover{
     position: absolute;
     bottom: 15px;
     border-radius: 0 10px 10px 0;
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
+    z-index: 2;
 }
 
 .tag-inverted {
@@ -297,7 +386,7 @@ main div:hover{
     margin-right: 3em;
     border-radius: 8px;;
     display: none;
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
 }
 
 .hamburger span{
@@ -308,7 +397,7 @@ main div:hover{
     margin-top: 8%;
     margin-bottom: 8%;
     border-radius: 2px;
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
 }
 
 .hamburger:hover {
@@ -320,6 +409,7 @@ main div:hover{
 }
 
 footer {
+    padding-top: 2%;
     justify-content: center;
 }
 
@@ -375,6 +465,11 @@ footer {
 }
 
 @media screen and (max-width: 768px) {    
+    .cube {
+        left: 10px;
+        top: 8px;
+    }
+
     .header h1{
         display: none;
     }

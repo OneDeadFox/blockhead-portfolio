@@ -10,14 +10,22 @@
 <body class="grid">
     <!-- Logo, Site Title, Nav Links -->
     <header class="header">
-        <img src="./assets/images/blockhead-logo.png" alt = "Blockhead">
-        <h1>Portfolio:</h1>
+        <div class="cube">
+            <div class="side top"></div>
+            <div class="side left"></div>
+            <div class="side front">
+                <div class="left-eye"></div>
+                <div class="right-eye"></div>
+            </div>
+        </div>
+        <h1>&nbspPortfolio:</h1>
         <h2><span>Tyler<span>&nbsp{Blockhead}&nbsp</span> Brown</span></h2>
         <ul>
             <li><button class="nav-button"><a href="#about"> About </a></button></li>
             <li><button class="nav-button"><a href="#work"> Work </a></button></li>
             <li><button class="nav-button"><a href="#contact"> Contact </a></button></li>
-            <li><button class="nav-button"><a href="#resume"> Resume </a></button></li>
+            <!-- Future Feature -->
+            <!-- <li><button class="nav-button"><a href="#resume"> Resume </a></button></li> -->
         </ul>
 
         <!-- small screen hamburger button -->
@@ -31,15 +39,17 @@
     <!-- Profile Pic, Name, Contact Links, Highlights/Tallents -->
     <aside id="sidebar" class="aside perimeter">
         <img src="./assets/images/blockhead-logo.png" alt="Blockhead">
-        <h2>Tyler Brown</h2>
-        <h3>Contact Information:</h3>
+        <h2>&nbspTyler Brown</h2>
+        <h3 id="contact">Contact Information{</h3>
         <ul>
-            <li>Email: <a href="mailto:tjosephb.pro@gmail.com"> tjosephb.pro@gmail.com </a></li>
-            <li>Phone: 253-867-6309</li>
+            <li><a href="mailto:tjosephb.pro@gmail.com"> tjosephb.pro@gmail.com </a></li>
+            <li>253-867-5309</li>
             <li><a href="https://github.com/OneDeadFox" target="_blank"> Github </a></li>
             <li><a href="#">LinkedIn</a></li>
 
         </ul>
+        <h3>}</h3>
+        <!-- Future Feature -->
         <!-- <h3>In-Project Navigation:</h3>
         <ul>
             <li>Project 1</li>
@@ -50,25 +60,33 @@
     </aside>
     <!-- About me, Project Img Links -->
     <main class="main main-image-grid">
-        <h3 class="main-header">About Me{</h3>
-        <p class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus sequi earum consequuntur, pariatur ullam minus eos sapiente magni aspernatur, nam nobis! Nesciunt doloremque consequuntur neque hic consectetur quod beatae cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam minima aspernatur ratione nisi reprehenderit doloremque eius maxime, nihil repellat quia maiores provident. Repellendus quae officia minima accusantium perspiciatis et? <br><span>}</span></p>
-        <div class="main-img-1">
-            <a href="https://onedeadfox.github.io/challenge-1-horiseon/" target="_blank"><span>&nbsp</span></a>
-            <section class="tag">Challenge 1</section>
+        <h3 id="about" class="main-header">About Me{</h3>
+        <p class="about">I am an excellent character from an unfinished game you've never heard of or played. However, just because I lack notoriety, don't mean I lack depth. It is my lack of a third dimension that causes that. In all seriousness, you should click the buttons I put on this page. They work! they might not take you far but at least they take you somewhere.<br><span>}</span></p>
+        <div id="work" class="main-img-1">
+            <a href="https://onedeadfox.github.io/challenge-1-horiseon/" target="_blank"><span></span></a>
+            <section class="tag">
+                Challenge 1
+                <a href="https://onedeadfox.github.io/challenge-1-horiseon/" target="_blank"><span></span></a>
+            </section>
         </div>
         <div class="main-img-2">
-            <section class="tag"><span></span>Challenge 1</section>
+            <a href="#"><span></span></a>
+            <section class="tag"><span></span>Blockhead
+            
+            </section>
         </div>
         <div class="main-img-3">
-            <section class="tag-inverted"><span></span>Challenge 1</section>
+            <a href="#"><span></span></a>
+            <section class="tag-inverted"><span></span>Blockheads</section>
         </div>
         <div class="main-img-4">
-            <section class="tag-inverted"><span></span>Challenge 1</section>
+            <a href="#"><span></span></a>
+            <section class="tag-inverted"><span></span>The Look</section>
         </div>
 
     </main>
     <footer class="footer perimeter">
-        <h2>Brick walls don't hurt an blockhead!!!</h2>
+        <h2>Brick walls don't hurt a Blockhead!</h2>
     </footer>
     <!-- small screen footer -->
     <footer class="footer alt-footer perimeter">
