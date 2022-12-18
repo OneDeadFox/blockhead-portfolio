@@ -31,8 +31,15 @@ header {
         padding-left: 20px;
     }
 
+    h2 {
+        display: flex;
+        font-size: 220%;
+        min-width: fit-content;
+        padding-left: 20px;
+    }
+
     /* Tyler ---- Brown */
-    h1 > span {
+    h2 > span {
         display: flex;
         font-size: 100%;
         margin-left: 0%;
@@ -40,11 +47,11 @@ header {
     }
 
     /* - Blockhead - */
-    h1 span span {
+    h2 span span {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 50%;
         text-shadow: 1px 1px 0px var(--accent), 1px -1px 0px var(--accent), -1px -1px 0px var(--accent), -1px 1px 0px var(--accent);
-        color: var(--bg-color);
+        color: var(--header-color);
         margin-left: 2%;
         margin-right: 2%;
         position: relative;
@@ -191,7 +198,8 @@ aside h3 {
 .main-img-4 {
     grid-area: main-img-4;
     background-color:green;
-    width:auto;
+    width: auto;
+    height: auto;
     display: flex;
 }
 
@@ -244,13 +252,93 @@ aside h3 {
 }
 /*#endregion MainLayout*/
 
-
 .nav-button {
-    background-color: var(--bg-color);
+    background-color: var(--header-color);
     border-color: var(--accent);
+    width: 75px;
     padding: 5%;
 }
 
 footer {
     justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+    .header h1{
+        display: none;
+    }
+    
+    header span span {
+        display: none;
+    }
+
+    .aside {
+        width: auto;
+    }
+
+    .grid{
+        grid-template-areas:
+        'header header header header header header'
+        'aside main main main main main'
+        'footer footer footer footer footer footer';
+    }
+
+    .main-image-grid {
+        grid-template-areas: 
+        'main-header'
+        'about'
+        'main-img-1'
+        'main-img-2'
+        'main-img-3'
+        'main-img-4'
+        ;
+    }
+
+    .main div {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        padding: 0;
+        width: auto;
+        height: 250px;
+        position: relative;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .header h1{
+        display: none;
+    }
+
+    .grid{
+        grid-template-areas:
+        'header'
+        'main'
+        'footer';
+    }
+    
+    .main-image-grid {
+        display: grid;
+        grid-template-areas: 
+        'main-header'
+        'about'
+        'main-img-1'
+        'main-img-2'
+        'main-img-3'
+        'main-img-4';
+    }
+
+    .main div {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        padding: 0;
+        width: auto;
+        height: 250px;
+        position: relative;
+    }
+    
+
+    #sidebar {
+        display: none;
+    }
 }
