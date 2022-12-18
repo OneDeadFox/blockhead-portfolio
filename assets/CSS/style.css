@@ -168,7 +168,8 @@ aside h3 {
 .main-img-1 {
     grid-area: main-img-1;
     background-color: grey;
-    /* background-image: url("https://onedeadfox.github.io/blockhead-portfolio/assets/images/blockhead-logo.png"); */
+    background-image: url("https://onedeadfox.github.io/challenge-1-horiseon/assets/images/screenshot.PNG");
+    background-size: cover;
     width: auto;
     padding-top: 56.25%;
     margin-top: 2%;
