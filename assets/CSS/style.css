@@ -18,7 +18,7 @@ includes font size and weight
 }
 
 /*#region Header*/
-header {
+.header {
     align-items: center;
     background-color: var(--header-color);
     border-bottom: .5em double var(--accent);
@@ -42,7 +42,7 @@ header {
     top: 0;
     left: 0;
     position: absolute;
-
+    transition: all 0.3s ease-in;
 }
 
 .top {
@@ -88,13 +88,18 @@ header {
     bottom: 3px;
     left: 1px;
 }
+
+.side:hover {
+    background-color: #2099e4;
+    opacity: 100%;
+}
 /*#endregion BlockheadLogo*/
 
 /* Heading */
 h1 {
     display: flex;
     font-size: 220%;
-    padding-left: 20px;
+    padding-left: 2%;
 }
 
 h2 {
@@ -249,7 +254,7 @@ aside h3 {
     padding-top: 56.25%;
     margin-top: 2%;
     display: flex;
-    opacity: 60%;
+    opacity: 80%;
     transition: all 0.3s ease-in;
 }
 
@@ -261,7 +266,7 @@ aside h3 {
     width: auto;
     padding-top: 56.25%;
     display: flex;
-    opacity: 60%;
+    opacity: 80%;
     transition: all 0.3s ease-in;
 }
 
@@ -272,7 +277,7 @@ aside h3 {
     background-size: contain;
     width: auto;
     display: flex;
-    opacity: 60%;
+    opacity: 80%;
     transition: all 0.3s ease-in;
 }
 
@@ -284,7 +289,7 @@ aside h3 {
     width: auto;
     height: auto;
     display: flex;
-    opacity: 60%;
+    opacity: 80%;
     transition: all 0.3s ease-in;
 }
 
@@ -332,7 +337,7 @@ main div:hover{
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 40px;
-    padding-right: 5px;
+    padding-right: 10px;
     position: absolute;
     bottom: 15px;
     border-radius: 0 10px 10px 0;
@@ -466,7 +471,7 @@ footer {
 
 @media screen and (max-width: 768px) {    
     .cube {
-        left: 10px;
+        left: 8px;
         top: 8px;
     }
 
@@ -474,7 +479,7 @@ footer {
         display: none;
     }
 
-    .header span span {
+    .header span {
         display:flex;
     }
 
