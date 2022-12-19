@@ -7,6 +7,7 @@ includes font size and weight
     --header-color: rgb(30, 30, 30);
     --bg-color:  rgb(15, 15, 15);
     --accent: #156fa5;
+    --dd-color: rgb(40, 40, 40);
 }
 
 * {
@@ -383,34 +384,98 @@ main div:hover{
     transition: all 0.3s ease-in;
 }
 
-.hamburger {
-    background-color: var(--header-color);
-    border-color: var(--accent);
-    width: 50px;
-    height: 50px;
-    margin-right: 3em;
-    border-radius: 8px;;
+.drop-down {
+    background-color: transparent;
+    border: 0;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -10px;
+    right: 50px;
     display: none;
-    transition: all 0.3s ease-in;
 }
 
-.hamburger span{
+.arrow-box {
+    width: 100px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
+    width: 15px;
+    height: 15px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    rotate: 45deg;
+
+}
+
+.drop-down .option {
+    background-color: var(--dd-color);
+    width: 100px;
+    height: 0px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    transition: all .1s ease-in .05s;
+}
+
+.drop-down .option .link {
+    position:absolute; 
+    width: 100px;
+    height: 50px;
+    top:0;
+    left: 0;   
+    display: flex;
+}
+
+.item-1 {
+    border-top: 2px solid var(--dd-color);
+    display: none;
+    opacity: 0%;
+    transition: all .1s ease-in;
+}
+
+.item-2 {
+    border-top: 2px solid var(--dd-color);
+    display: none;
+    opacity: 0%;
+    transition: all .1s ease-in .05s;
+}
+
+.item-3 {
+    border-top: 2px solid var(--dd-color);
+    display: none;
+    opacity: 0%;
+    transition: all .1s ease-in .1s;
+}
+
+.drop-down:hover {
     background-color: var(--accent);
-    width: 37px;
-    height: 6px;
-    display:flex;
-    margin-top: 8%;
-    margin-bottom: 8%;
-    border-radius: 2px;
-    transition: all 0.3s ease-in;
 }
 
-.hamburger:hover {
+.drop-down:focus {
+    background-color: var(--dd-color);
+}
+
+.drop-down:focus .item-1,
+.drop-down:focus .item-2,
+.drop-down:focus .item-3,
+.drop-down:focus .link {
+    display: flex;
+    height: 50px;
+    opacity: 100%;
+}
+
+.item-1:hover,
+.item-2:hover,
+.item-3:hover {
     background-color: var(--accent);
-}
-
-.hamburger:hover > span {
-    background-color: var(--header-color);
 }
 
 footer {
@@ -483,6 +548,10 @@ footer {
         display:flex;
     }
 
+    .drop-down {
+        display: flex;
+    }
+
     .grid{
         width: auto;
         grid-template-areas:
@@ -530,6 +599,7 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        right: 20px;
     }
 
     #sidebar {
